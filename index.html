@@ -14,12 +14,16 @@
         grid-row-gap: 5px;
       }
       .element {
-        display:flex;
-        flex-direction:column;
+            display: flex;
+        flex-direction: column;
         width: 100px;
         height: 80px;
+        gap: 30px;
         border: 1px solid black;
-        border-radius:5px;
+        border-radius: 5px;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center;
       }
       .element-inrow {
         display:flex;
@@ -31,9 +35,19 @@
   <body>
     <div class="parent">
       <div class="element">
-        <div class="element-inrow"><p>Some infoze</p></div>
-        <div class="element-inrow"><p>Some More</p></div>
+        <div class="element-inrow"><p>Test Element</p></div>
       </div>
     </div>
+    <script defer>
+      function $(a) {return document.getElementById(a);}
+      let controllers = {
+        "magnavox":{
+          number:1,
+          mass:1972,
+          abbrev:"Gc",
+          src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Magnavox-Odyssey-Controller-FL.jpg/1200px-Magnavox-Odyssey-Controller-FL.jpg"
+        },
+      }
+    </script>
   </body>
 </html>
