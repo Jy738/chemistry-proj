@@ -4,7 +4,7 @@
     <title>Chemistrayze</title>  
     <style>
       :root {
-        --bg: linear-gradient(0deg,rgba(107, 131, 176, 1) 27%, rgba(145, 168, 198, 1) 69%, rgba(161, 183, 207, 1) 84%, rgba(213, 222, 242, 1) 100%);
+        --bg: linear-gradient(0deg,rgba(107, 131, 176, 1) 6%, rgba(145, 168, 198, 1) 45%, rgba(161, 183, 207, 1) 84%, rgba(213, 222, 242, 1) 100%)
       }
       body {
         font-family:sans-serif;
@@ -22,7 +22,8 @@
         width: 180px;
         height: 120px;
         gap: 50px;
-        border: 3px solid black;
+        border: 3px solid #465787;
+        filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.6));
         border-radius: 5px;
         background-size: 60%, 100%;
         background-repeat: no-repeat;
@@ -30,7 +31,9 @@
       }
       .element-inrow {
         display: flex;
+        color:white;
         flex-direction: row;
+        text-shadow: 1px 1px 3px black;
         gap: 80px;
         padding: 0;
         margin-top: -10px;
