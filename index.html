@@ -3,6 +3,9 @@
   <head>
     <title>Chemistrayze</title>  
     <style>
+      :root {
+        --bg: linear-gradient(0deg,rgba(107, 131, 176, 1) 27%, rgba(145, 168, 198, 1) 69%, rgba(161, 183, 207, 1) 84%, rgba(213, 222, 242, 1) 100%);
+      }
       body {
         font-family:sans-serif;
       }
@@ -19,13 +22,11 @@
         width: 180px;
         height: 120px;
         gap: 50px;
-        border: 1px solid black;
+        border: 3px solid black;
         border-radius: 5px;
-        background-size: 60%;
+        background-size: 60%, 100%;
         background-repeat: no-repeat;
         background-position: center;
-        background: #91bdc9;
-background: linear-gradient(0deg, rgba(145, 189, 201, 1) 4%, rgba(125, 169, 185, 1) 33%, rgba(138, 181, 200, 1) 71%, rgba(157, 199, 223, 1) 86%, rgba(184, 225, 255, 1) 100%);
       }
       .element-inrow {
         display: flex;
@@ -205,7 +206,7 @@ background: linear-gradient(0deg, rgba(145, 189, 201, 1) 4%, rgba(125, 169, 185,
       let controllername = controllerlist[i];
       let controller = controllers[controllername];
       $("content").insertAdjacentHTML('beforeend',`
-          <div class="element" style="">
+          <div class="element" style="background-image:url(${controller.src}), var(--bg);">
           <div class="element-inrow">
             <p>${controller.number}</p> <p>${controller.year}</p>
           </div>
