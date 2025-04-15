@@ -35,7 +35,7 @@
     </style>
   </head>
   <body>
-    <div class="parent">
+    <div class="parent" id="content">
       
     </div>
     <script defer>
@@ -202,7 +202,16 @@
     for(let i=0;i<controllerlist.length;i++){
       let controllername = controllerlist[i];
       let controller = controllers[controllername];
-      
+      $("content").insertAdjacentHTML('beforeend',`
+          <div class="element" style="background-image:url(${controller.src});">
+          <div class="element-inrow">
+            <p>${controller.number}</p> <p>${controller.year}</p>
+          </div>
+          <div class="element-inrow">
+            <p>${controller.abbrev}</p><p>${controllername}</p>
+          </div>
+          </div>
+      `);
     }
     </script>
   </body>
